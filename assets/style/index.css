@@ -28,9 +28,13 @@
 main {
     min-width: 100%;
     height: 100vh;
-    
+    height: calc(var(--vh, 1vh) * 100);
 }
 
+.map {
+    width: 100%;
+    height: 100%;
+}
 
 /* Overylay/Splash Page */
 
@@ -39,8 +43,26 @@ main {
     inset: 0 0 0 0;
     min-width: 100%;
     height: 100%;
+    height: calc(var(--vh, 1vh) * 100);
     display: grid;
     place-items: center;
     background-color: var(--app-dark-bg);
     z-index: 9999;
+}
+
+.overlay .loading {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgb(255 255 255 / 0.8);
+    border-top: 4px solid transparent;
+    animation: rotate 1.25s linear infinite;
+    border-radius: 50%;
+}
+
+@keyframes rotate {
+    from {
+        rotate: z 0deg;
+    } to {
+        rotate: z 360deg;
+    }
 }
