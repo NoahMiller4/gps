@@ -66,3 +66,7 @@ main {
         rotate: z 360deg;
     }
 }
+
+.mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right {
+    display: none !important;
+}
